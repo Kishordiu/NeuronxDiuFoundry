@@ -18,7 +18,7 @@ export default function CustomCursor() {
   useEffect(() => {
     // Check if device is touch
     if (window.matchMedia("(pointer: coarse)").matches) {
-      setIsTouch(true);
+      setTimeout(() => setIsTouch(true), 0);
       return;
     }
 

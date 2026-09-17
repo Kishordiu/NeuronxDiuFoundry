@@ -18,14 +18,19 @@ const sora = Sora({
 });
 
 export const metadata: Metadata = {
-  title: `${eventConfig.eventName} | by ${eventConfig.organization}`,
-  description: eventConfig.description,
+  title: `${eventConfig.eventName} — ${eventConfig.organization} 8-Hour Hackathon`,
+  description: `${eventConfig.eventName} — ${eventConfig.organization} 8-Hour Hackathon on ${eventConfig.date}. Build above the ordinary.`,
   authors: [{ name: eventConfig.organization }],
   openGraph: {
-    title: `${eventConfig.eventName} - A 12-Hour Hackathon by ${eventConfig.organization}`,
-    description: eventConfig.description,
+    title: `${eventConfig.eventName} — ${eventConfig.organization} 8-Hour Hackathon`,
+    description: `${eventConfig.eventName} • ${eventConfig.organization} • 8-Hour Hackathon • ${eventConfig.date}`,
     siteName: eventConfig.eventName,
     type: "website",
+  },
+  twitter: {
+    card: "summary_large_image",
+    title: `${eventConfig.eventName} — ${eventConfig.organization} 8-Hour Hackathon`,
+    description: `${eventConfig.eventName} • ${eventConfig.organization} • 8-Hour Hackathon • ${eventConfig.date}`,
   },
 };
 

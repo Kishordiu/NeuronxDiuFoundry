@@ -116,20 +116,40 @@ export default function Footer() {
           </div>
 
           <div className="flex flex-col gap-6 items-center md:items-end text-sm">
-            <div className="flex flex-col gap-2 items-center md:items-end">
-              <span className="text-cloud-white font-bold tracking-widest uppercase mb-1">Community Partner</span>
-              <img 
-                src="/assets/diu-foundry-logo.jpg" 
-                alt={eventConfig.communityPartner} 
-                className="h-12 w-auto object-contain mix-blend-screen opacity-70 hover:opacity-100 transition-opacity"
-              />
-              <span className="text-xs tracking-widest uppercase text-white/50">{eventConfig.communityPartner}</span>
+            <div className="flex flex-col gap-4 items-center md:items-end">
+              <div className="flex flex-col gap-1 items-center md:items-end">
+                <span className="text-cloud-white font-bold tracking-widest uppercase text-xs">Community Partner</span>
+                <img 
+                  src="/assets/diu-foundry-logo.jpg" 
+                  alt={eventConfig.communityPartner} 
+                  className="h-10 w-auto object-contain mix-blend-screen opacity-70 hover:opacity-100 transition-opacity"
+                />
+                <span className="text-xs tracking-widest uppercase text-white/50">{eventConfig.communityPartner}</span>
+              </div>
+
+              <div className="flex flex-col gap-1 items-center md:items-end">
+                <span className="text-cloud-white font-bold tracking-widest uppercase text-xs">Supporting Partner</span>
+                <span className="text-sm font-semibold tracking-wider text-warm-sunlight">{eventConfig.supportingPartner}</span>
+              </div>
             </div>
             
-            <div className="flex flex-col gap-2 items-center md:items-end mt-4">
-              <span className="text-cloud-white font-bold tracking-widest uppercase mb-1">Links</span>
-              <a href={eventConfig.registrationUrl} target="_blank" rel="noopener noreferrer" className="hover:text-warm-sunlight transition-colors">
-                Registration Form
+            <div className="flex flex-col gap-2 items-center md:items-end mt-2">
+              <span className="text-cloud-white font-bold tracking-widest uppercase mb-1 text-xs">Links</span>
+              <a 
+                href={eventConfig.venueUrl} 
+                target="_blank" 
+                rel="noopener noreferrer" 
+                className="hover:text-warm-sunlight transition-colors text-xs tracking-wider uppercase flex items-center gap-1"
+              >
+                VIEW VENUE ↗
+              </a>
+              <a 
+                href={eventConfig.registrationUrl} 
+                target="_blank" 
+                rel="noopener noreferrer" 
+                className="hover:text-warm-sunlight transition-colors text-xs tracking-wider uppercase"
+              >
+                Registration Form ↗
               </a>
             </div>
           </div>

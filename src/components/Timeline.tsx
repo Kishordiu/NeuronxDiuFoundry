@@ -22,7 +22,7 @@ export default function Timeline() {
             The Ascent
           </h2>
           <h3 className="text-4xl md:text-5xl font-light">
-            12-Hour Timeline
+            8-Hour Timeline
           </h3>
         </div>
 

@@ -1,6 +1,6 @@
 "use client";
 
-import { useState, useEffect } from "react";
+import { useState, useEffect, useCallback } from "react";
 import { motion, PanInfo } from "framer-motion";
 import { ChevronLeft, ChevronRight } from "lucide-react";
 import { CarouselCard } from "./CarouselCard";
@@ -34,6 +34,9 @@ export function ThreeDCardCarousel({ items, renderCard, onCardClick }: ThreeDCar
     return () => clearInterval(interval);
   }, [items.length, isHovered]);
 
+  const handleNext = useCallback(() => setCurrentIndex((prev) => (prev + 1) % items.length), [items.length]);
+  const handlePrev = useCallback(() => setCurrentIndex((prev) => (prev - 1 + items.length) % items.length), [items.length]);
+
   // Keyboard navigation
   useEffect(() => {
     const handleKeyDown = (e: KeyboardEvent) => {
@@ -42,10 +45,7 @@ export function ThreeDCardCarousel({ items, renderCard, onCardClick }: ThreeDCar
     };
     window.addEventListener("keydown", handleKeyDown);
     return () => window.removeEventListener("keydown", handleKeyDown);
-  }, [items.length]);
-
-  const handleNext = () => setCurrentIndex((prev) => (prev + 1) % items.length);
-  const handlePrev = () => setCurrentIndex((prev) => (prev - 1 + items.length) % items.length);
+  }, [handleNext, handlePrev]);
 
   const handleDragEnd = (event: MouseEvent | TouchEvent | PointerEvent, info: PanInfo) => {
     if (info.offset.x < -50) handleNext();
@@ -116,7 +116,7 @@ export function ThreeDCardCarousel({ items, renderCard, onCardClick }: ThreeDCar
                 }
               }}
             >
-              {renderCard ? renderCard(item, isCenter) : <CarouselCard item={item} isCenter={isCenter} />}
+              {renderCard ? renderCard(item, isCenter) : <CarouselCard item={item} isCenter={isCenter} index={index % items.length} />}
             </motion.div>
           );
         })}

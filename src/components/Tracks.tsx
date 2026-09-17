@@ -5,6 +5,33 @@ import { motion, useScroll, useTransform } from "framer-motion";
 import { ThreeDCardCarousel } from "./carousel/ThreeDCardCarousel";
 import { problemStatements, ProblemStatement } from "@/config/problemStatements";
 import { ProblemDetailModal } from "./carousel/ProblemDetailModal";
+import { Lock } from "lucide-react";
+
+import { eventConfig } from "@/config/eventConfig";
+
+/**
+ * When problems are locked, strip all sensitive content from the items
+ * so none of it ships to the client. Only keep the minimal fields
+ * needed to render locked placeholder cards.
+ */
+function getSanitizedItems(): ProblemStatement[] {
+  if (eventConfig.problemStatementsRevealed) {
+    return problemStatements;
+  }
+  // Return redacted placeholders — same length so carousel geometry works,
+  // but no titles, context, requirements, or judging details.
+  return problemStatements.map((ps, idx) => ({
+    id: `locked-${idx}`,
+    domain: "LOCKED",
+    title: `Problem Statement ${String(idx + 1).padStart(2, "0")}`,
+    context: "",
+    whatWeWantToBuild: [],
+    groundRules: [],
+    judging: [],
+    icon: Lock,
+    accentMetadata: ps.accentMetadata, // safe — only a CSS gradient class
+  }));
+}
 
 export default function Tracks() {
   const containerRef = useRef<HTMLDivElement>(null);
@@ -16,6 +43,8 @@ export default function Tracks() {
   });
 
   const yBg = useTransform(scrollYProgress, [0, 1], ["0%", "15%"]);
+
+  const displayItems = getSanitizedItems();
 
   return (
     <>
@@ -34,22 +63,33 @@ export default function Tracks() {
             <h2 className="text-sm font-bold tracking-[0.3em] uppercase text-warm-sunlight mb-4">
               Choose Your Terrain
             </h2>
-            <h3 className="text-4xl md:text-6xl font-light text-cloud-white">
+            <h3 className="text-4xl md:text-6xl font-light text-cloud-white mb-4">
               Hackathon Tracks
             </h3>
+            <p className="text-sm md:text-base text-cloud-white/70 max-w-xl mx-auto tracking-wide">
+              {eventConfig.problemStatementsRevealed
+                ? "Select a track to view full problem context, requirements, and judging criteria."
+                : eventConfig.problemStatementReleaseText}
+            </p>
           </div>
 
           <ThreeDCardCarousel 
-            items={problemStatements} 
-            onCardClick={(item) => setSelectedProblem(item)} 
+            items={displayItems} 
+            onCardClick={(item) => {
+              if (eventConfig.problemStatementsRevealed) {
+                setSelectedProblem(item);
+              }
+            }} 
           />
         </div>
       </section>
 
-      <ProblemDetailModal 
-        problem={selectedProblem} 
-        onClose={() => setSelectedProblem(null)} 
-      />
+      {eventConfig.problemStatementsRevealed && (
+        <ProblemDetailModal 
+          problem={selectedProblem} 
+          onClose={() => setSelectedProblem(null)} 
+        />
+      )}
     </>
   );
 }

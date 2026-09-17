@@ -21,7 +21,7 @@ export default function Hero() {
   const yText = useTransform(scrollYProgress, [0, 1], ["0%", "80%"]);
   const opacityText = useTransform(scrollYProgress, [0, 0.5], [1, 0]);
   
-  const scaleLogo = useTransform(scrollYProgress, [0, 1], [1, 0.8]);
+  
 
   return (
     <section 

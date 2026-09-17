@@ -11,7 +11,7 @@ const philosophySteps = [
   { step: "04", title: "Mentor", desc: "Gain insights from industry veterans." },
   { step: "05", title: "Iterate", desc: "Refine and polish your prototypes." },
   { step: "06", title: "Demo", desc: "Showcase your build to the world." },
-  { step: "07", title: "Network", desc: "Connect with the foundry community." },
+  { step: "07", title: "Network", desc: "Connect with the builder community." },
 ];
 
 export default function Philosophy() {
@@ -41,13 +41,13 @@ export default function Philosophy() {
         <div className="text-center mb-32 relative">
           <div className="mb-20">
             <h2 className="text-sm font-bold tracking-[0.3em] uppercase text-warm-sunlight mb-4">
-              DIU FOUNDRY
+              {eventConfig.organization}
             </h2>
             <h3 className="text-sm tracking-[0.4em] uppercase text-cloud-white/60 mb-8">
-              Community
+              Student Builder Community
             </h3>
-            <p className="text-2xl md:text-4xl font-light text-cloud-white/90 max-w-3xl mx-auto leading-relaxed">
-              &quot;DIU Foundry is a community built around turning ideas into working things.&quot;
+            <p className="text-xl md:text-3xl font-light text-cloud-white/90 max-w-3xl mx-auto leading-relaxed">
+              &quot;{eventConfig.communityDescription}&quot;
             </p>
           </div>
 
@@ -57,7 +57,7 @@ export default function Philosophy() {
             Why We Build
           </h2>
           <p className="text-3xl md:text-5xl font-light text-cloud-white/90 max-w-3xl mx-auto leading-tight">
-            One idea. <span className="font-bold">Twelve hours.</span> One team. One build.
+            One idea. <span className="font-bold">Eight hours.</span> One team. One build.
           </p>
         </div>
 

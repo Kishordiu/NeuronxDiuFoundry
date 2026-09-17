@@ -31,7 +31,7 @@ export default function FinalCTA() {
             READY TO BUILD?
           </h3>
           <p className="text-xl md:text-3xl font-light text-soft-ivory/80 mb-12">
-            12 HOURS. ONE IDEA. MAKE IT REAL.
+            8 HOURS. ONE IDEA. MAKE IT REAL.
           </p>
           
           <div className="flex flex-col sm:flex-row items-center justify-center gap-6">
