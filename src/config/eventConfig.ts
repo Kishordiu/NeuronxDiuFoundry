@@ -43,6 +43,7 @@ export interface EventConfig {
   tagline: string;
   description: string;
   registrationUrl: string;
+  venue: string;
   venueUrl: string;
   ticketRefundable: boolean;
   problemStatementsRevealed: boolean;
@@ -76,7 +77,8 @@ export const eventConfig: EventConfig = {
   tagline: "Build above the ordinary.",
   description: "Learn → Ideate → Build → Mentor → Iterate → Demo → Network",
   registrationUrl: "https://forms.gle/1E3cZtYEpjZnt9dm6",
-  venueUrl: "https://maps.app.goo.gl/abi3y8AnDBKfNJ8ir8?g_st=aw",
+  venue: "Shanmuga Industries Arts & Science College",
+  venueUrl: "https://maps.app.goo.gl/xGJe6QcAXQEfrLxW8?g_st=ac",
   ticketRefundable: false,
   problemStatementsRevealed: false,
   problemStatementReleaseText: "Problem statements will be revealed one day before the hackathon.",
@@ -140,7 +142,7 @@ export const eventConfig: EventConfig = {
       question: "Where is the hackathon being conducted?",
       answer: "The official venue location is available on Google Maps.",
       ctaText: "VIEW VENUE ↗",
-      ctaUrl: "https://maps.app.goo.gl/abi3y8AnDBKfNJ8ir8?g_st=aw",
+      ctaUrl: "https://maps.app.goo.gl/xGJe6QcAXQEfrLxW8?g_st=ac",
     },
     {
       question: "Who can participate?",

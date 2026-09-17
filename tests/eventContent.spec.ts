@@ -76,7 +76,7 @@ test.describe("NeuronX26 Content, Configuration & UX Validations", () => {
   });
 
   test("09 & 26: Venue destination link is correct and opens externally", async ({ page }) => {
-    const venueLink = "https://maps.app.goo.gl/abi3y8AnDBKfNJ8ir8?g_st=aw";
+    const venueLink = "https://maps.app.goo.gl/xGJe6QcAXQEfrLxW8?g_st=ac";
     const venueAnchor = page.locator(`a[href="${venueLink}"]`).first();
     await expect(venueAnchor).toBeVisible();
     await expect(venueAnchor).toHaveAttribute("target", "_blank");
@@ -150,7 +150,7 @@ test.describe("NeuronX26 Content, Configuration & UX Validations", () => {
     await expect(factsSection).toContainText("October 3");
     await expect(factsSection).toContainText("8 Hours");
     await expect(factsSection).toContainText("Revealing Soon");
-    await expect(factsSection).toContainText("View on Google Maps");
+    await expect(factsSection).toContainText("Shanmuga Industries Arts & Science College");
   });
 
   test("20, 21, 37: Responsive layout test across viewports with no horizontal overflow", async ({ page }) => {

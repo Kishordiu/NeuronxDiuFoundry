@@ -30,7 +30,7 @@ export default function EventFacts() {
     },
     {
       label: "VENUE",
-      value: "View on Google Maps",
+      value: eventConfig.venue,
       subtext: "Official Location",
       icon: MapPin,
       isLink: true,
