@@ -1,33 +1,37 @@
-# Neuron × DIU Foundry
+# NEURON × DIU FOUNDRY
 
-> **An experimental Next.js product experience exploring AI and innovation workflows.**
+![Cinematic hero](https://capsule-render.vercel.app/api?type=rect&color=0:070707,100:171717&height=230&text=NEURON%20%C3%97%20DIU%20FOUNDRY&fontColor=F3F3EE&fontSize=40&fontAlignY=38&desc=AI%20%2F%20CREATIVE%20TECHNOLOGY&descColor=999991&descSize=12&descAlignY=66&animation=fadeIn)
 
-This repository contains an evolving DIU Foundry-oriented web experience built around modern product UI, modular components and future-facing AI/innovation concepts.
+> **AI / CREATIVE TECHNOLOGY.**
 
-## Highlights
-- Next.js App Router foundation
-- Reusable component architecture
-- Responsive product interface
-- Structured for iterative AI/product experimentation
+## THE PREMISE
 
-## Stack
-Next.js · React · TypeScript · Tailwind CSS
+Neuron × DIU Foundry is a future-facing web experience exploring how AI, innovation programs and a creative-technology lab can live inside one strong visual identity.
 
-## Run locally
-~~~bash
-npm install
-npm run dev
-~~~
+## THE EXPERIENCE
 
-Build:
+**Neuron × DIU Foundry is a future-facing web experience exploring how AI, innovation programs and a creative-technology lab can live inside one strong visual identity.**
 
-~~~bash
-npm run build
-npm start
-~~~
+## THE SYSTEM
 
-## Status
-**Experimental product prototype**
+Build a place for ideas to collide. | Let the interface feel experimental without becoming vague. | Make technology feel tangible.
 
-## Author
-**K. Kishor Kumar** · [GitHub @Kishordiu](https://github.com/Kishordiu)
+## THE STACK
+
+A Next.js App Router foundation carries reusable product components and an intentionally visual presentation layer, ready for deeper DIU Foundry workflows and AI services.
+
+## RUN
+
+```bash
+Experimental product prototype
+```
+
+## PROJECT STATE
+
+**Next.js · React · TypeScript · Tailwind CSS**
+
+This README intentionally distinguishes implemented behaviour from future integrations so the project can evolve without overstating what exists today.
+
+---
+
+<p align="center"><strong>K. KISHOR KUMAR</strong><br><sub>ENGINEERING / PRODUCT / SYSTEMS</sub></p>
