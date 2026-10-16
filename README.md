@@ -22,8 +22,24 @@ A Next.js App Router foundation carries reusable product components and an inten
 
 ## RUN
 
+**Requirements:** Node.js 20+ and npm.
+
 ```bash
-Experimental product prototype
+npm ci
+npm run dev
+```
+
+For a production build and local production server:
+
+```bash
+npm run build
+npm start
+```
+
+Quality checks:
+
+```bash
+npm run lint
 ```
 
 ## PROJECT STATE
