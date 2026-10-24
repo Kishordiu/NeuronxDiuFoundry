@@ -2,6 +2,8 @@
   <img src="./assets/hero-banner.svg" alt="Neuron x DIU Foundry — Creative AI Summit & Hackathon" width="100%" />
 </div>
 
+# NEURON × DIU FOUNDRY
+
 <p align="center">
   <a href="https://diufoundry.online"><img alt="Studio" src="https://img.shields.io/badge/DIU_FOUNDRY-INNOVATION_LAB-240F42?style=for-the-badge&logoColor=DDD6FE&labelColor=05020A" /></a>&nbsp;
   <img alt="Domain" src="https://img.shields.io/badge/CREATIVE_TECH-AI_SUMMIT-8B5CF6?style=for-the-badge&labelColor=05020A" />&nbsp;
