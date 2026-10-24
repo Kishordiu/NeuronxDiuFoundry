@@ -1,110 +1,85 @@
 <div align="center">
-  <img src="./assets/hero-banner.svg" alt="Neuron x DIU Foundry — Creative AI Summit & Hackathon" width="100%" />
+  <img src="./assets/hero-banner.svg" alt="Neuron × DIU Foundry — creative technology summit artwork" width="100%" />
 </div>
 
 # NEURON × DIU FOUNDRY
 
 <p align="center">
-  <a href="https://diufoundry.online"><img alt="Studio" src="https://img.shields.io/badge/DIU_FOUNDRY-INNOVATION_LAB-240F42?style=for-the-badge&logoColor=DDD6FE&labelColor=05020A" /></a>&nbsp;
-  <img alt="Domain" src="https://img.shields.io/badge/CREATIVE_TECH-AI_SUMMIT-8B5CF6?style=for-the-badge&labelColor=05020A" />&nbsp;
-  <img alt="Animation" src="https://img.shields.io/badge/GSAP_+_LENIS-SMOOTH_KINETICS-06B6D4?style=for-the-badge&labelColor=05020A" />&nbsp;
-  <img alt="Framework" src="https://img.shields.io/badge/NEXT.JS_15-APP_ROUTER-EC4899?style=for-the-badge&labelColor=05020A" />
+  <img alt="Experience" src="https://img.shields.io/badge/EXPERIENCE-CREATIVE_TECH-8B5CF6?style=for-the-badge&labelColor=05020A" />
+  <img alt="Motion" src="https://img.shields.io/badge/MOTION-GSAP_+_LENIS-06B6D4?style=for-the-badge&labelColor=05020A" />
+  <img alt="Framework" src="https://img.shields.io/badge/FRAMEWORK-NEXT.JS-EC4899?style=for-the-badge&labelColor=05020A" />
 </p>
 
-<p align="center">
-  <b>At the intersection of cognitive code, generative intelligence, and haute digital craft.</b><br/>
-  <em>The official production platform for Neuron, DIU Foundry's flagship creative AI summit and hackathon, featuring ultra-smooth motion graphics and design R&D.</em>
-</p>
+**An editorial web experience for presenting creative-technology challenges, event information, and a hackathon programme.**
 
----
+Neuron is an event-oriented interface concept built around a visual system of typography, motion, challenge tracks, timelines, prizes, and participant information. The goal is to make event content feel like a designed experience rather than a generic landing-page template.
 
-## ✦ Summit Vision
+## The experience, in layers
 
-**Neuron × DIU Foundry** is a digital showcase and hackathon command center built to elevate technical execution into art. Rejecting boilerplate web design, it leverages Next.js 15 Server Components, hardware-accelerated GSAP timelines, and Lenis inertia scrolling to create an editorial, high-fashion creative technology experience.
+| Layer | Purpose |
+|---|---|
+| Hero | Establishes the event identity and first impression |
+| Tracks | Groups creative-technology challenge areas |
+| Timeline | Communicates an event sequence in a scannable format |
+| Prizes | Presents award-related content configured in the interface |
+| Rules and FAQ | Gives participants a place to find event guidance |
 
-```text
- ┌─────────────────────────────────────────────────────────────────────────────┐
- │                           NEURON SUMMIT COMMAND HUB                         │
- ├─────────────────────┬───────────────────────────────┬───────────────────────┤
- │ R&D CHALLENGE TRACKS│ GSAP INERTIA KINETICS ENGINE  │ LATENT SPACE PRIZES   │
- │ Autonomous Agents   │ Lenis 60fps Smooth Scroll     │ Seed Capital & Grants │
- │ Multimodal AI Audio │ Hardware Accelerated Shaders  │ Enterprise Deploy     │
- └─────────────────────┴───────────────────────────────┴───────────────────────┘
-```
-
----
-
-## ⚡ Architecture & Kinetic Motion System
+## Motion architecture
 
 ```text
-[ USER INTERACTION (Smooth Scroll / Pointer Coordinates) ]
+Pointer / scroll input
         │
         ▼
-[ LENIS INERTIA ENGINE ] ── (Hardware Normalized Scroll Delta)
+Lenis scroll behaviour
         │
         ▼
-[ GSAP SCROLLTRIGGER & TIMELINES ]
+GSAP timelines / section choreography
         │
-        ├─► [ HERO PERSPECTIVE MESH ] (`src/components/Hero.tsx`)
-        ├─► [ EVENT TIMELINE CHOREOGRAPHY ] (`src/components/Timeline.tsx`)
-        ├─► [ TRACK CARD PARALLAX ] (`src/components/Tracks.tsx`)
-        └─► [ PRIZE REVEAL SHADERS ] (`src/components/Prizes.tsx`)
+        ├── Hero composition
+        ├── Tracks and cards
+        ├── Timeline
+        └── Prize / information sections
 ```
 
----
+The source uses Next.js, React, GSAP, Lenis, and Framer Motion. Motion is part of the visual language, not a substitute for readable content. Review the experience on touch devices and with reduced-motion preferences before event use.
 
-## ✦ Core Systems & Components
-
-- **Kinetic Hero Canvas** (`src/components/Hero.tsx`) — Layered typographic reveals driven by custom easing curves and procedural particle fields.
-- **Summit Tracks Architecture** (`src/components/Tracks.tsx`) — Interactive categorization of creative AI engineering challenges (Cognitive Agents, Synthetic Media, Zero-Trust AI).
-- **Smooth Inertia Framework** — Integrated Lenis smooth scroll runtime coupled with Framer Motion and GSAP for stutter-free 60fps transitions.
-- **Enterprise Design Rigor** — Built with Playwright end-to-end testing suites, strict TypeScript typing, and Next.js 15 App Router conventions.
-
----
-
-## 🛠️ Project Structure
+## Repository map
 
 ```text
-NeuronxDiuFoundry/
-├── public/                 # Summit identity assets, typography & 3D textures
-├── src/
-│   ├── app/
-│   │   ├── layout.tsx      # Root metadata, font declarations & Lenis provider
-│   │   ├── page.tsx        # Summit landing orchestrator
-│   │   └── globals.css     # Ultra-violet tokens & darkroom CSS variables
-│   ├── components/         # High-craft UI sections
-│   │   ├── Navigation.tsx  # Dynamic floating dock
-│   │   ├── Hero.tsx        # Title reveal & particle engine
-│   │   ├── EventFacts.tsx  # Key event stats & venue metrics
-│   │   ├── Tracks.tsx      # Hackathon challenge tracks
-│   │   ├── Timeline.tsx    # Chronological summit schedule
-│   │   ├── Prizes.tsx      # Grant allocations & awards
-│   │   └── RulesAndFAQ.tsx # Hackathon governance
-│   └── tests/              # Playwright visual regression suites
-└── next.config.ts          # Turbopack optimization & security headers
+src/
+├── app/             Root layout, page composition and global styles
+├── components/      Navigation, hero, tracks, timeline, event facts and FAQs
+└── tests/           Playwright test suite
+next.config.ts       Next.js configuration
 ```
 
----
+## Run locally
 
-## ⚡ Quickstart
+**Requirements:** Node.js and npm.
 
 ```bash
-# Clone repository
 git clone https://github.com/Kishordiu/NeuronxDiuFoundry.git
 cd NeuronxDiuFoundry
-
-# Install dependencies
-npm install  # or bun install
-
-# Launch creative tech environment
+npm ci
 npm run dev
 ```
 
-Navigate to [http://localhost:3000](http://localhost:3000) to experience the kinetic interface.
+Open the local URL printed by Next.js, usually [http://localhost:3000](http://localhost:3000).
+
+## Build and checks
+
+```bash
+npm run lint
+npm run build
+npm start
+```
+
+The repository also includes Playwright configuration; use the project's configured test command or CI workflow to run the end-to-end suite.
+
+## Content and production boundary
+
+This repository is the source for the web experience, not evidence that a particular summit is currently scheduled, that prize funding is guaranteed, or that registration/payment flows are live. Before using it for a real event, verify event dates, organisers, venue, rules, prize details, form handling, privacy terms, and every external integration against the event owner’s approved information.
 
 ---
 
-<p align="center">
-  <b>RESEARCH → BUILD → TEST → SHIP</b><br/>
-  <sub>A creative technology initiative by <a href="https://diufoundry.online">DIU Foundry</a> · Engineered by K. Kishor Kumar</sub>
-</p>
+<p align="center"><sub>DIU FOUNDRY · CREATIVE TECHNOLOGY / EXPERIENCE ENGINEERING</sub></p>
